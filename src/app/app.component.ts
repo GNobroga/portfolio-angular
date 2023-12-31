@@ -8,7 +8,5 @@ import { RouterOutlet } from '@angular/router';
   imports: [CommonModule, RouterOutlet],
   template: '<router-outlet/>',
 })
-export class AppComponent {
-  title = 'portfolio-angular';
-}
+export class AppComponent {}
 

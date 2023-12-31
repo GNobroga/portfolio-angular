@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Últimas Experiências</h1>
+  <div class="experiences">
+
+    @for(experience of experiences(); let i = $index; track experience) {
+      <details  [open]="experience.isOpen" (toggle)="openDetail(i)">
+        <summary [class.up]="experience.isOpen">
+          <strong>{{ experience.title }}</strong>
+          <p>{{ experience.subtitle }}</p>
+        </summary>
+        <article>{{ experience.description }}</article>
+      </details>
+    }
+  </div>
+</div>
+

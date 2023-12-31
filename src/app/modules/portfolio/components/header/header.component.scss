@@ -23,8 +23,10 @@
       left: 50%;
       top: -40px;
       transform: translate(-50%);
-      width: 140px;
-      height: 140px;
+      max-width: 140px;
+      max-height: 140px;
+      width: 100%;
+      height: 100%;
     }
 
     .details {
@@ -33,8 +35,6 @@
       color: var(--white-color);
       gap: 0.5rem;
       text-align: center;
-      word-break: break-all;
-      word-wrap: break-word;
 
       h1 {
         font-size: 1.4rem;
@@ -63,14 +63,22 @@
         border-radius: 0.5rem;
         cursor: pointer;
         font-size: 1rem;
+        transition: all 0.3s ease-out;
       }
 
       @for $index from 1 through length($colors) {
         button:nth-child(#{$index}) {
           background-color: nth($colors, $index);
+          &:hover {
+            background-color: var(--primary-color-dark-green);
+            color: var(--white-color);
+          }
 
           @if ($index == 2) {
             color: white;
+            &:hover {
+              background-color: var(--secondary-color-dark-green);
+            }
           }
         }
 
@@ -111,6 +119,9 @@
           background-position: center;
           width: 32px;
           height: 32px;
+          @media (max-width: 30rem) {
+            display: none;
+          }
         }
 
         &.whatsapp::before {

@@ -1,20 +1,10 @@
 <div class="knowledge">
   <h1>Conhecimentos</h1>
   <ul>
-    <li>
-      <img src="assets/icons/knowledge/html5.svg" alt="HTML Icon">
-    </li>
-    <li>
-      <img src="assets/icons/knowledge/css3.svg" alt="CSS Icon">
-    </li>
-    <li>
-      <img src="assets/icons/knowledge/javascript.svg" alt="Javascript Icon">
-    </li>
-    <li>
-      <img src="assets/icons/knowledge/angular.svg" alt="Angular Icon">
-    </li>
-    <li>
-      <img src="assets/icons/knowledge/nodejs.svg" alt="NodeJs Icon">
-    </li>
+    @for(knowledge of knowledges(); track knowledge.src) {
+      <li>
+        <img [src]="knowledge.src" [alt]="knowledge.alt" loading="lazy">
+      </li>
+    }
   </ul>
 </div>
