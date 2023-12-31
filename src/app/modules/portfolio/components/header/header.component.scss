@@ -1,0 +1,140 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  .green-area {
+    background-color: var(--primary-color-light-green);
+    min-height: 150px;
+  }
+
+  .area {
+    background-color: var(--black-color);
+    position: relative;
+    flex: 1;
+    padding: 0 1rem;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+
+    img {
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--white-color);
+      position: absolute;
+      left: 50%;
+      top: -40px;
+      transform: translate(-50%);
+      width: 140px;
+      height: 140px;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      color: var(--white-color);
+      gap: 0.5rem;
+      text-align: center;
+      word-break: break-all;
+      word-wrap: break-word;
+
+      h1 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+
+      h2, p, address {
+        font-size: 1rem;
+        color: var(--grey-color);
+      }
+    }
+    .buttons {
+      margin-top: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      $colors: var(--primary-color-light-green), var(--secondary-color-blue);
+
+      button {
+        max-width: 250px;
+        width: 100%;
+        outline: none;
+        border: none;
+        height: 42px;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      @for $index from 1 through length($colors) {
+        button:nth-child(#{$index}) {
+          background-color: nth($colors, $index);
+
+          @if ($index == 2) {
+            color: white;
+          }
+        }
+
+        @media (max-width: 50rem) {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+
+          button {
+            max-width: none;
+            height: 45px;
+          }
+
+        }
+      }
+
+    }
+
+    .contact {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+
+      figure {
+        border: 1px solid var(--white-color);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        gap: 1rem;
+
+        @mixin icone {
+          content: '';
+          display: block;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 32px;
+          height: 32px;
+        }
+
+        &.whatsapp::before {
+          background-image: url('/assets/icons/whatsapp.svg');
+          @include icone;
+        }
+
+        &.email::before {
+          background-image: url('/assets/icons/mail.svg');
+          @include icone;
+        }
+
+        a {
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+          text-decoration: none;
+          color: var(--grey-color);
+
+          strong {
+            color: var(--primary-color-light-green);
+          }
+        }
+      }
+    }
+  }
+}
