@@ -3,7 +3,7 @@
   section {
     background-color: var(--black-color-dark);
     color: var(--white-color);
-    padding: 1rem 0;
+    padding: 1rem 0.8rem;
 
     h1 {
       font-size: 1.4rem;
@@ -12,40 +12,18 @@
     }
 
     .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
       max-width: 800px;
       margin: auto;
-      display: flex;
-      padding: 0.5rem;
-      gap: 1rem;
-      flex-wrap: wrap;
 
-      .project {
-        flex: 1;
-        padding: 3rem;
-        border: 2px solid var(--primary-color-light-green);
-        border-radius: 0.5rem;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.5s ease-out;
-
-        img {
-          width: 100%;
-          min-width: 40px;
-          max-width: 100px;
-          object-fit: contain;
-          object-position: center;
-        }
-
-        &:hover {
-          background-color: var(--primary-color-light-green);
-        }
+      @media only screen and (max-width: 40rem) {
+        grid-template-columns: 1fr;
       }
-
-     & > p {
-      text-align: center;
-      margin: auto;
-      color: var(--grey-color);
-     }
     }
   }
+
+
+
 }

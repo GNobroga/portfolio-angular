@@ -1,0 +1,93 @@
+:host {
+  
+  .project {
+    background-color: var(--white-color);
+    padding: 1rem;
+    border-radius: 0.2rem;
+    color: var(--black-color-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    cursor: pointer;
+    position: relative;
+    height: 100%;
+
+
+    @mixin capitalize {
+      text-transform: capitalize;
+      font-family:
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Helvetica,
+      Arial,
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    }
+
+    h1 {
+      color: var(--primary-color-dark-green);
+      font-size: 1.2rem;
+      @include capitalize;
+
+    }
+
+    p {
+      font-size: 0.8rem;
+      line-height: 1rem;
+
+    }
+
+    .technologies {
+      display: grid;
+      grid-template: 1fr / 1fr 1fr;
+      gap: 1rem;
+
+      li {
+        flex: 1;
+        text-align: center;
+        background-color: var(--primary-color-light-green);
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        color: var(--white-color);
+        word-wrap: normal;
+        word-break: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media only screen and (max-width: 25rem) {
+        grid-template: 1fr / 1fr;
+      }
+    }
+
+    .redirect-to-github {
+      background-color: lighten(#333333ac, 5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      cursor: pointer;
+      opacity: 0;
+      justify-content: center;
+      place-items: center;
+      transition: all 0.2s ease-in;
+      img {
+        object-fit: contain;
+        filter: invert(1);
+      }
+    }
+
+    &:hover{
+      .redirect-to-github {
+        opacity: 1;
+      }
+    }
+  }
+
+}

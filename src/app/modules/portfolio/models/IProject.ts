@@ -1,4 +1,6 @@
 export default interface IProject {
-  src: string;
-  alt: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  link: string;
 }

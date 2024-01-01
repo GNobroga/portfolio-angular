@@ -102,11 +102,12 @@
     }
 
     .contact {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
+      max-width: 800px;
+      display: grid;
+      grid-template: 1fr / 1fr 1fr;
       gap: 2rem;
-      justify-content: center;
+      margin: auto;
+      margin-top: 1.5rem;
 
       figure {
         border: 1px solid var(--white-color);
@@ -144,6 +145,10 @@
           @include icone;
         }
 
+        &.youtube::before {
+          background-image: url('/assets/icons/youtube.png');
+          @include icone;
+        }
 
         a {
           display: flex;
@@ -156,6 +161,10 @@
             color: var(--primary-color-light-green);
           }
         }
+      }
+
+      @media only screen and (max-width: 30rem) {
+        grid-template: 1fr / 1fr;
       }
     }
   }

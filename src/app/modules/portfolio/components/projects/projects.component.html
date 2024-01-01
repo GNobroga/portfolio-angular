@@ -1,13 +1,8 @@
 <section>
   <h1>Projetos desenvolvidos</h1>
-  <div class="projects">
-    @for (project of projects(); track project) {
-      <section class="project">
-        <img [src]="project.src" [alt]="project.alt">
-      </section>
-    }
-    @empty {
-      <p>Não há nenhum projeto</p>
-    }
-  </div>
+  <ul class="projects">
+   @for (project of projects(); track project) {
+    <app-project [project]="project"/>
+   }
+  </ul>
 </section>

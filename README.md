@@ -1,8 +1,15 @@
 # Portfolio
 
-TODO: Quando eu voltar da praia eu melhoro esse projeto
+Portfólio feito utilizando Angular V17 (Melhorando)
+
+## Photo 1
 
 ![Alt text](image.png)
 
+## Photo 2
+
+![Alt text](image-2.png)
+
+## Photo 3
 
 ![Alt text](image-1.png)

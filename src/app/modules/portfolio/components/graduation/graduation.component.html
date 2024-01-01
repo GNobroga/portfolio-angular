@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Graduações</h1>
+  <div class="experiences">
+
+    @for(graduation of graduations(); let i = $index; track graduation) {
+      <details>
+        <summary>
+          <strong>{{ graduation.course }}</strong>
+          <p>{{ graduation.university }} ({{ graduation.start }} - {{ graduation.end }})</p>
+        </summary>
+          <article [innerHTML]="graduation.description"></article>
+      </details>
+    }
+  </div>
+</div>
+

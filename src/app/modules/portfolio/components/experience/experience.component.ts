@@ -10,7 +10,7 @@ export class ExperienceComponent {
 
   public experiences = signal<IExperience[]>([
     {
-      title: 'Desenvolvedor Full Stack',
+      title: 'Desenvolvedor Full Stack - Java | Angular',
       subtitle: 'Fapes · Estágio - Atual cargo',
       description: 'É uma bolsa oferecida pelo Tribunal de Justiça do Espírito Santo <strong> (TJES) </strong> em parceria com a FAPES, com o objetivo de substituir e aprimorar o antigo sistema de cartório utilizado pelo TJES. Nesse projeto, atuo como desenvolvedor full-stack, utilizando o framework Angular para a construção de páginas flexíveis e dinâmicas, e Java com Spring Boot para a criação de Web API, seguindo o padrão REST.',
     },

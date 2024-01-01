@@ -1,0 +1,14 @@
+<li class="project">
+    <h1 [textContent]="project.title"></h1>
+    <p [innerHTML]="project.description"></p>
+    <ul class="technologies">
+      @for (technology of project.technologies; track technology) {
+        <li>{{ technology }}</li>
+      }
+    </ul>
+
+  <a class="redirect-to-github" href="{{project.link}}">
+      <img src="assets/icons/github.png" alt=""/>
+  </a>
+
+</li>
