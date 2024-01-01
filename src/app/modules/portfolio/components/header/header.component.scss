@@ -109,6 +109,8 @@
       gap: 2rem;
       margin: auto;
       margin-top: 1.5rem;
+      word-wrap: break-word;
+      word-break: break-all;
 
       figure {
         border: 1px solid var(--white-color);
