@@ -7,8 +7,7 @@ import IKnowledge from '../../models/IKnowledge';
   styleUrl: './knowledge.component.scss'
 })
 export class KnowledgeComponent {
-
-  public knowledges = signal([
+  public knowledges = signal<IKnowledge[]>([
     {
       src: 'assets/icons/knowledge/html5.svg',
       alt: 'Icone de conhecimento de HTML5'
@@ -29,5 +28,5 @@ export class KnowledgeComponent {
       src: 'assets/icons/knowledge/nodejs.svg',
       alt: 'Icone de conhecimento de NodeJS'
     }
-  ] as IKnowledge[]);
+  ]);
 }

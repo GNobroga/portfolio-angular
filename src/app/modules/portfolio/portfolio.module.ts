@@ -6,7 +6,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { KnowledgeComponent } from './components/knowledge/knowledge.component';
 import { ExperienceComponent } from './components/experience/experience.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -15,11 +16,11 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     KnowledgeComponent,
     ExperienceComponent,
-    FooterComponent
+    ProjectsComponent
   ],
   imports: [
     CommonModule,
-    PortfolioRoutingModule
+    PortfolioRoutingModule,
   ]
 })
 export class PortfolioModule { }

@@ -1,6 +1,6 @@
 :host {
 
-  footer {
+  section {
     background-color: var(--black-color-dark);
     color: var(--white-color);
     padding: 1rem 0;
@@ -15,10 +15,12 @@
       max-width: 800px;
       margin: auto;
       display: flex;
-      flex-direction: column;
       padding: 0.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
 
       .project {
+        flex: 1;
         padding: 3rem;
         border: 2px solid var(--primary-color-light-green);
         border-radius: 0.5rem;
@@ -30,12 +32,20 @@
           width: 100%;
           min-width: 40px;
           max-width: 100px;
+          object-fit: contain;
+          object-position: center;
         }
 
         &:hover {
           background-color: var(--primary-color-light-green);
         }
       }
+
+     & > p {
+      text-align: center;
+      margin: auto;
+      color: var(--grey-color);
+     }
     }
   }
 }

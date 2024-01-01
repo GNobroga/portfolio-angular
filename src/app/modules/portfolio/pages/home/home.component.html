@@ -1,7 +1,18 @@
-<app-header/>
-<main>
-  <app-knowledge/>
-  <app-experience/>
-</main>
-<app-footer/>
+<div>
+  <app-header/>
+  <main>
+    <app-knowledge/>
+    <app-experience/>
+    @defer(on viewport) {
+      <app-projects/>
+    }
+    @placeholder {
+      <p>Carregando projetos...</p>
+    }
+    @loading(minimum 2s) {
+      <p class="p-loading">Carregando projetos...</p>
+    }
+  </main>
+
+</div>
 
