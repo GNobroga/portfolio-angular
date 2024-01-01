@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { AfterViewInit, Component, signal } from '@angular/core';
 import IProject from '../../models/IProject';
 
 @Component({
