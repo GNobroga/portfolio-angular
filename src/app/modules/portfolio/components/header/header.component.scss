@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
 
+
   .green-area {
     background-color: var(--primary-color-light-green);
     min-height: 150px;
@@ -163,7 +164,7 @@
         }
       }
 
-      @media only screen and (max-width: 30rem) {
+      @media only screen and (max-width: 50rem) {
         grid-template: 1fr / 1fr;
       }
     }

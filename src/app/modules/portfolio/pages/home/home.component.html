@@ -2,9 +2,9 @@
   <app-header/>
   <main>
     <div class="divider"></div>
-    <app-graduation/>
-    <app-knowledge/>
-    <app-experience/>
+    <app-graduation id="graduation"/>
+    <app-knowledge id="knowledge"/>
+    <app-experience id="experience"/>
 
     @defer(on viewport) {
       <app-projects/>
@@ -12,8 +12,11 @@
     @placeholder {
       <p>Carregando projetos...</p>
     }
-    @loading(minimum 2s) {
-      <p class="p-loading">Carregando projetos...</p>
+    @loading(minimum 0.2s) {
+      <div class="loading-area">
+        <div class="loading"></div>
+        <p>Buscando os projetos...</p>
+      </div>
     }
   </main>
 
